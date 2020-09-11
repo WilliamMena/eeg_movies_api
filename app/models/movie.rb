@@ -1,6 +1,4 @@
 class Movie < ApplicationRecord
-
-    # attr_accessor :title, :genre, :year, :runTime, :rating, :mainActors
     
     validates :title, presence: true
     validates :year, presence: true, numericality: { greater_than_or_equal_to: 1888}
@@ -10,7 +8,5 @@ class Movie < ApplicationRecord
     message: "%{value} is not a valid genre" }
     validates :rating, inclusion: { in: ['G', 'PG', 'PG-13', 'R', 'NC-17'], 
         message: "%{value} is not a valid rating" }
-    
-    
 
 end
