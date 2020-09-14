@@ -10,10 +10,8 @@ class Api::MoviesController < ApplicationController
 
     def create
         movie = Movie.new(movie_params)
-        # Doesn't accept runTime
         # Doesn't accept actors names
-        # Uppercase Genres
-        byebug
+        # byebug
 
         if movie.save
             render json: movie
