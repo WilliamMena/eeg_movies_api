@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # resources :movie, only: [:show]
   namespace :api do
-    resources :movies, only: [:index, :show]
+    resources :movies, only: [:index, :show, :create, :update, :destroy]
   end
 
 end
