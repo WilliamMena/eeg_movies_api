@@ -1,4 +1,5 @@
 class Movie < ApplicationRecord
+    accepts_nested_attributes_for :main_actors
     
     validates :title, presence: true
     validates :year, presence: true, numericality: { greater_than_or_equal_to: 1888}

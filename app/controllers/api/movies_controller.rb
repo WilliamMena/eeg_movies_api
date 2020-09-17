@@ -43,13 +43,15 @@ class Api::MoviesController < ApplicationController
     private
 
     def movie_params
+        params[:movie][:main_actors] ||= []
         params.require(:movie).permit(
+            :id,
             :title, 
             :genre,
             :year,
             :runTime,
             :rating,
-            mainActors: [ ]
+            main_actors: []
             )
     end
 
